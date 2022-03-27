@@ -24,7 +24,7 @@ job('MNTLAB-mkurakevich-main-build-job') {
       }
     }
     activeChoiceReactiveParam('CHILD_NAMES') {
-           description('Childe jobs')
+           description('Child jobs')
            choiceType('CHECKBOX')
            groovyScript {
                script('return ["MNTLAB-mkurakevich-child1-build-job", "MNTLAB-mkurakevich-child2-build-job", "MNTLAB-mkurakevich-child3-build-job", "MNTLAB-mkurakevich-child4-build-job"]')
@@ -92,7 +92,7 @@ for(jobs in arr) {
    scm {
     git {
       remote {
-        url 'https://github.com/Marfysa/build-t00ls.git'
+        url GIT_URL
       }
       branch '$BRANCH_NAME'
     }
