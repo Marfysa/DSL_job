@@ -30,7 +30,9 @@ job('MNTLAB-mkurakevich-main-build-job') {
                script('return ["MNTLAB-mkurakevich-child1-build-job", "MNTLAB-mkurakevich-child2-build-job", "MNTLAB-mkurakevich-child3-build-job", "MNTLAB-mkurakevich-child4-build-job"]')
            }
     }
- scm {
+    
+    
+  scm {
     git {
       remote {
         url GIT_URL
